@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.gitko.tbbc.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "BelowBedrockCavesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

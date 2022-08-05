@@ -1,0 +1,14 @@
+{
+  "values": [
+    "tbbc:rockslate_block",
+    "tbbc:ironslate_block",
+    "tbbc:rockslate_coal_ore",
+    "tbbc:rockslate_iron_ore",
+    "tbbc:rockslate_copper_ore",
+    "tbbc:rockslate_gold_ore",
+    "tbbc:rockslate_diamond_ore",
+    "tbbc:rockslate_redstone_ore",
+    "tbbc:rockslate_emerald_ore",
+    "tbbc:rockslate_lapis_ore"
+  ]
+}

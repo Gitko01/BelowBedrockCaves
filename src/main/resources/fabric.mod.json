@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "tbbc",
+  "version": "${version}",
+
+  "name": "The Below Bedrock Caves",
+  "description": "A dimension set in an environment below bedrock with more ores. (BBC short for Below Bedrock Caves)",
+  "authors": [
+    "Gitko (prev. MrCrazyMan109)"
+  ],
+  "contact": {
+    "homepage": "no website yet",
+    "sources": "not github yet"
+  },
+
+  "license": "GNU GPLv3",
+  "icon": "assets/tbbc/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.gitko.tbbc.BelowBedrockCaves"
+    ]
+  },
+  "mixins": [
+    "tbbc.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+  }
+}

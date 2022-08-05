@@ -1,0 +1,33 @@
+{
+  "itemGroup.tbbc.tab": "The Below Bedrock Caves",
+
+  "block.tbbc.rockslate_block": "Rockslate",
+  "block.tbbc.ironslate_block": "Ironslate",
+  "block.tbbc.rockslate_coal_ore": "Rockslate Coal Ore",
+  "block.tbbc.rockslate_iron_ore": "Rockslate Iron Ore",
+  "block.tbbc.rockslate_copper_ore": "Rockslate Copper Ore",
+  "block.tbbc.rockslate_gold_ore": "Rockslate Gold Ore",
+  "block.tbbc.rockslate_diamond_ore": "Rockslate Diamond Ore",
+  "block.tbbc.rockslate_redstone_ore": "Rockslate Redstone Ore",
+  "block.tbbc.rockslate_lapis_ore": "Rockslate Lapis Ore",
+  "block.tbbc.rockslate_emerald_ore": "Rockslate Emerald Ore",
+
+  "item.tbbc.tbbc_gem": "TBBC Gem",
+
+  "tooltip.tbbc.hold_shift": "Hold §3SHIFT§r for more information",
+
+  "tooltip.tbbc.rockslate_block_1": "A very tough rock that seems to be ",
+  "tooltip.tbbc.rockslate_block_2": "a combination between bedrock and deepslate.",
+  "tooltip.tbbc.rockslate_block_3": "It appears to never fully break down.",
+  "tooltip.tbbc.ironslate_block_1": "A tough version of deepslate.",
+  "tooltip.tbbc.ironslate_block_2": "Used as the Below Bedrock Caves portal block.",
+
+  "tooltip_shift_1.tbbc.tbbc_gem": "This gem is used to ignite ",
+  "tooltip_shift_2.tbbc.tbbc_gem": "the Below Bedrock Caves portal",
+
+  "biome.tbbc.bbcplains": "BBC Plains",
+  "biome.tbbc.bbclushcaves": "BBC Lush Caves",
+  "biome.tbbc.bbcdripstonecaves": "BBC Dripstone Caves",
+  "biome.tbbc.bbcfrozenpeaks": "BBC Frozen Peaks",
+  "biome.tbbc.bbcsavannaplateau": "BBC Savanna Plateau"
+}
