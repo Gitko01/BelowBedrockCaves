@@ -10,7 +10,11 @@ There are a couple places you can download this mod from.
 1. [CurseForge](https://www.curseforge.com/minecraft/mc-mods/the-below-bedrock-caves)  
 2. [Modrinth](https://modrinth.com/mod/the_below_bedrock_caves)  
 3. [GitHub](https://github.com/Gitko01/BelowBedrockCaves/releases)  
-4. [My website](https://gitko01.github.io/website)  
+4. [My website](https://gitko01.github.io)  
+
+
+# Wiki
+[https://gitko01.github.io/tbbc_wiki](https://gitko01.github.io/tbbc_wiki/)  
 
 # Changelog (v1.0.0 -> v1.0.0)
 First public release!
