@@ -12,6 +12,10 @@ There are a couple places you can download this mod from.
 3. [GitHub](https://github.com/Gitko01/BelowBedrockCaves/releases)  
 4. [My website](https://gitko01.github.io)  
 
+# Versions
+- 1.19.1 Fabric  
+- 1.19.2 Fabric  
+
 
 # Wiki
 [https://gitko01.github.io/tbbc_wiki](https://gitko01.github.io/tbbc_wiki/)  
@@ -28,7 +32,6 @@ Thanks to the developers of FabricMC and Custom Portal API!
 
 
 # Future Features / Versions 
-- 1.19.2 Fabric  
 Who knows? Maybe one day I'll come up with something to add.
 
 # Below Bedrock Caves acronym
