@@ -24,7 +24,7 @@ Thanks to the developers of FabricMC and Custom Portal API!
 
 
 # Future Features / Versions 
-- 1.19.2 Fabric
+- 1.19.2 Fabric  
 Who knows? Maybe one day I'll come up with something to add.
 
 # Below Bedrock Caves acronym
