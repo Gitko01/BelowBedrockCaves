@@ -18,7 +18,7 @@ There are a couple places you can download this mod from.
 
 
 # Wiki
-[https://gitko01.github.io/tbbc_wiki](https://gitko01.github.io/tbbc_wiki/)  
+[https://gitko01.github.io/wikis/tbbc/index.html](https://gitko01.github.io/wikis/tbbc/index.html)  
 
 # Changelog (v1.0.0 -> v1.0.0)
 First public release!
