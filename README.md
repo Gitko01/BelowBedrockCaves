@@ -33,6 +33,3 @@ Thanks to the developers of FabricMC and Custom Portal API!
 
 # Future Features / Versions 
 Who knows? Maybe one day I'll come up with something to add.
-
-# Below Bedrock Caves acronym
-Yes. It spells out BBC.
