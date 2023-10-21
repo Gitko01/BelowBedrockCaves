@@ -24,7 +24,7 @@ public class ModBlocks {
                     Material.STONE)
                     .strength(6f, 6f)
                     .requiresTool()
-            ), ModItemGroup.TAB, "tooltip.tbbc.rockslate_block", 3, true);
+            ), ModItemGroup.TAB);
 
     public static final Block IRONSLATE_BLOCK = registerBlock("ironslate_block",
             new Block(FabricBlockSettings.of(

@@ -12,24 +12,25 @@ There are a couple places you can download this mod from.
 3. [GitHub](https://github.com/Gitko01/BelowBedrockCaves/releases)  
 4. [My website](https://gitko01.github.io)  
 
-# Versions
-- 1.19.1 Fabric  
-- 1.19.2 Fabric  
-
-
 # Wiki
 [https://gitko01.github.io/wikis/tbbc/index.html](https://gitko01.github.io/wikis/tbbc/index.html)  
 
-# Changelog (v1.0.0 -> v1.0.0)
-First public release!
+# Changelog (v1.0.0 -> v1.0.1)
+- Updates to Custom Portal API and some other minor changes to the mod
 
 # Bugs  
 Please report all bugs to this GitHub repo's issues section.
 
 # Credits and Libraries Used
-Thanks to the developers of FabricMC and Custom Portal API!
+Thanks to the developers of FabricMC!  
 [Custom Portal API](https://github.com/kyrptonaught/customportalapi)
 
-
 # Future Features / Versions 
-Who knows? Maybe one day I'll come up with something to add.
+Nothing as of now
+
+# Building Mod
+1. Download source code for this mod
+2. Unzip source code into a folder
+3. Open build.gradle in your favorite IDE __or__ the command line
+4. Run the build task in Gradle
+5. Check <mod_folder>/build/libs for this mod's .jar file (usually named below-bedrock-caves-<mod_version>.jar)

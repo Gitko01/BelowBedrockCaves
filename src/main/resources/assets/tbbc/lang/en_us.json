@@ -16,14 +16,11 @@
 
   "tooltip.tbbc.hold_shift": "Hold §3SHIFT§r for more information",
 
-  "tooltip.tbbc.rockslate_block_1": "A very tough rock that seems to be ",
-  "tooltip.tbbc.rockslate_block_2": "a combination between bedrock and deepslate.",
-  "tooltip.tbbc.rockslate_block_3": "It appears to never fully break down.",
-  "tooltip.tbbc.ironslate_block_1": "A tough version of deepslate.",
+  "tooltip.tbbc.ironslate_block_1": "A reinforced version of deepslate.",
   "tooltip.tbbc.ironslate_block_2": "Used as the Below Bedrock Caves portal block.",
 
   "tooltip_shift_1.tbbc.tbbc_gem": "This gem is used to ignite ",
-  "tooltip_shift_2.tbbc.tbbc_gem": "the Below Bedrock Caves portal",
+  "tooltip_shift_2.tbbc.tbbc_gem": "the Below Bedrock Caves portal.",
 
   "biome.tbbc.bbcplains": "BBC Plains",
   "biome.tbbc.bbclushcaves": "BBC Lush Caves",

@@ -4,16 +4,16 @@
   "version": "${version}",
 
   "name": "The Below Bedrock Caves",
-  "description": "A dimension set in an environment below bedrock with more ores. (BBC short for Below Bedrock Caves)",
+  "description": "A dimension set in an environment \"below bedrock\" with more ores than the overworld.",
   "authors": [
-    "Gitko (prev. MrCrazyMan109)"
+    "Gitko"
   ],
   "contact": {
-    "homepage": "no website yet",
-    "sources": "not github yet"
+    "homepage": "https://gitko01.github.io/",
+    "sources": "https://github.com/Gitko01/BelowBedrockCaves"
   },
 
-  "license": "GNU GPLv3",
+  "license": "CPMML v1.1",
   "icon": "assets/tbbc/icon.png",
 
   "environment": "*",

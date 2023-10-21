@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class BelowBedrockCavesMixin {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		BelowBedrockCaves.LOGGER.info("TBBC (The Below Bedrock Caves) Mixin loaded");
+		BelowBedrockCaves.LOGGER.info("[TBBC] Mixin loaded");
 	}
 	// Nothing here yet!
 }

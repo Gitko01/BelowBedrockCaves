@@ -15,12 +15,12 @@ public class BelowBedrockCaves implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("TBBC (The Below Bedrock Caves) loaded");
-
 		ModItems.registerItems();
 		ModBlocks.registerModBlocks();
 		ModDimensions.register();
 		ModWorldGen.generateModWorldGen();
 		ModBiomes.register();
+
+		LOGGER.info("[TBBC] Successfully initialized!");
 	}
 }
