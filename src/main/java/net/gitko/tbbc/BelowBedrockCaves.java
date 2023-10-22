@@ -2,6 +2,7 @@ package net.gitko.tbbc;
 
 import net.fabricmc.api.ModInitializer;
 import net.gitko.tbbc.block.ModBlocks;
+import net.gitko.tbbc.item.ModItemGroup;
 import net.gitko.tbbc.item.ModItems;
 import net.gitko.tbbc.world.biome.ModBiomes;
 import net.gitko.tbbc.world.dimension.ModDimensions;
@@ -17,6 +18,7 @@ public class BelowBedrockCaves implements ModInitializer {
 	public void onInitialize() {
 		ModDimensions.register();
 		ModWorldGen.generateModWorldGen();
+		ModItemGroup.initItemGroup();
 
 		LOGGER.info("[TBBC] Successfully initialized!");
 	}
