@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
@@ -19,7 +20,7 @@ public class ModItems {
 
     // Registry stuff
 
-    private static Item registerItem(String name, Item item, ItemGroup group) {
+    private static Item registerItem(String name, Item item, RegistryKey<ItemGroup> group) {
         ItemGroupEvents.modifyEntriesEvent(group).register(content -> {
             content.add(item);
         });
