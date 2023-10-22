@@ -1,6 +1,7 @@
 package net.gitko.tbbc.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.gitko.tbbc.BelowBedrockCaves;
 import net.gitko.tbbc.item.ModItemGroup;
@@ -9,9 +10,10 @@ import net.minecraft.block.Material;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.*;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -93,49 +95,57 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey, Integer tooltipLineAmount, Boolean holdDownShift) {
         registerBlockItem(name, block, group, tooltipKey, tooltipLineAmount, holdDownShift);
-        return Registry.register(Registry.BLOCK, new Identifier(BelowBedrockCaves.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(BelowBedrockCaves.MOD_ID, name), block);
     }
 
     private static Item registerBlockItem(String name, Block block, ItemGroup group, String tooltipKey, Integer tooltipLineAmount, Boolean holdDownShift) {
-        return Registry.register(Registry.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
-            new BlockItem(block, new FabricItemSettings().group(group)) {
-                @Override
-                public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-                    // Mojang. Why is it so hard to add \n?
-                    if (holdDownShift) {
-                        if (Screen.hasShiftDown()) {
-                            Integer currentLine = 1;
-
-                            while (tooltipLineAmount >= currentLine) {
-                                tooltip.add(Text.translatable(tooltipKey + "_" + currentLine.toString()));
-                                currentLine += 1;
-                            }
-                        } else {
-                            tooltip.add(Text.translatable("tooltip.tbbc.hold_shift"));
-                        }
-                    } else {
+        BlockItem blockItem = new BlockItem(block, new FabricItemSettings()) {
+            @Override
+            public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+                // Mojang. Why is it so hard to add \n?
+                if (holdDownShift) {
+                    if (Screen.hasShiftDown()) {
                         Integer currentLine = 1;
 
                         while (tooltipLineAmount >= currentLine) {
                             tooltip.add(Text.translatable(tooltipKey + "_" + currentLine.toString()));
                             currentLine += 1;
                         }
+                    } else {
+                        tooltip.add(Text.translatable("tooltip.tbbc.hold_shift"));
+                    }
+                } else {
+                    Integer currentLine = 1;
+
+                    while (tooltipLineAmount >= currentLine) {
+                        tooltip.add(Text.translatable(tooltipKey + "_" + currentLine.toString()));
+                        currentLine += 1;
                     }
                 }
-            });
+            }
+        };
+
+        ItemGroupEvents.modifyEntriesEvent(group).register(content -> {
+            content.add(blockItem);
+        });
+
+        return Registry.register(Registries.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
+                blockItem);
     }
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
-        return Registry.register(Registry.BLOCK, new Identifier(BelowBedrockCaves.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(BelowBedrockCaves.MOD_ID, name), block);
     }
 
     private static Item registerBlockItem(String name, Block block, ItemGroup group) {
-        return Registry.register(Registry.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().group(group)));
-    }
+        BlockItem blockItem = new BlockItem(block, new FabricItemSettings());
 
-    public static void registerModBlocks() {
-        BelowBedrockCaves.LOGGER.info("Registering ModBlocks for " + BelowBedrockCaves.MOD_ID);
+        ItemGroupEvents.modifyEntriesEvent(group).register(content -> {
+            content.add(blockItem);
+        });
+
+        return Registry.register(Registries.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
+                blockItem);
     }
 }

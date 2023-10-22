@@ -4,16 +4,16 @@ import net.gitko.tbbc.BelowBedrockCaves;
 import net.gitko.tbbc.block.ModBlocks;
 import net.gitko.tbbc.item.ModItems;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionType;
 
 public class ModDimensions {
-    public static final RegistryKey<World> BBCDIM_DIMENSION_KEY = RegistryKey.of(Registry.WORLD_KEY,
+    public static final RegistryKey<World> BBCDIM_DIMENSION_KEY = RegistryKey.of(RegistryKeys.WORLD,
             new Identifier(BelowBedrockCaves.MOD_ID, "bbcdim"));
-    public static final RegistryKey<DimensionType> BBCDIM_TYPE_KEY = RegistryKey.of(Registry.DIMENSION_TYPE_KEY,
+    public static final RegistryKey<DimensionType> BBCDIM_TYPE_KEY = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
             BBCDIM_DIMENSION_KEY.getValue());
 
     public static void register() {

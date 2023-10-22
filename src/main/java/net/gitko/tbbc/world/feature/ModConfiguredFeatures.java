@@ -1,10 +1,13 @@
 package net.gitko.tbbc.world.feature;
 
+import net.gitko.tbbc.BelowBedrockCaves;
 import net.gitko.tbbc.block.ModBlocks;
-import net.minecraft.block.Blocks;
+import net.minecraft.registry.Registerable;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
-import net.minecraft.util.registry.RegistryEntry;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
 
 import java.util.List;
@@ -56,36 +59,23 @@ public class ModConfiguredFeatures {
     );
 
     // Registry Entries
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_COAL_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_coal_ore"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_COPPER_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_copper_ore"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_IRON_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_iron_ore"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_GOLD_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_gold_ore"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_REDSTONE_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_redstone_ore"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_DIAMOND_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_diamond_ore"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_LAPIS_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_lapis_ore"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_EMERALD_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_emerald_ore"));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_COAL_ORE =
-            ConfiguredFeatures.register("rockslate_coal_ore", Feature.ORE,
-                    new OreFeatureConfig(BBC_COAL_ORES, 17));
-
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_COPPER_ORE =
-            ConfiguredFeatures.register("rockslate_copper_ore", Feature.ORE,
-                    new OreFeatureConfig(BBC_COPPER_ORES, 20));
-
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_IRON_ORE =
-            ConfiguredFeatures.register("rockslate_iron_ore", Feature.ORE,
-                    new OreFeatureConfig(BBC_IRON_ORES, 9));
-
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_GOLD_ORE =
-            ConfiguredFeatures.register("rockslate_gold_ore", Feature.ORE,
-                    new OreFeatureConfig(BBC_GOLD_ORES, 9));
-
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_REDSTONE_ORE =
-            ConfiguredFeatures.register("rockslate_redstone_ore", Feature.ORE,
-                    new OreFeatureConfig(BBC_REDSTONE_ORES, 8));
-
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_DIAMOND_ORE =
-            ConfiguredFeatures.register("rockslate_diamond_ore", Feature.ORE,
-                    new OreFeatureConfig(BBC_DIAMOND_ORES, 12));
-
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_LAPIS_ORE =
-            ConfiguredFeatures.register("rockslate_lapis_ore", Feature.ORE,
-                    new OreFeatureConfig(BBC_LAPIS_ORES, 7));
-
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_EMERALD_ORE =
-            ConfiguredFeatures.register("rockslate_emerald_ore", Feature.ORE,
-                    new OreFeatureConfig(BBC_EMERALD_ORES, 3));
+    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> configuredFeatureRegisterable) {
+        configuredFeatureRegisterable.register(ROCKSLATE_COAL_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_COAL_ORES, 17)));
+        configuredFeatureRegisterable.register(ROCKSLATE_COPPER_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_COPPER_ORES, 20)));
+        configuredFeatureRegisterable.register(ROCKSLATE_IRON_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_IRON_ORES, 9)));
+        configuredFeatureRegisterable.register(ROCKSLATE_GOLD_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_GOLD_ORES, 9)));
+        configuredFeatureRegisterable.register(ROCKSLATE_REDSTONE_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_REDSTONE_ORES, 8)));
+        configuredFeatureRegisterable.register(ROCKSLATE_DIAMOND_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_DIAMOND_ORES, 12)));
+        configuredFeatureRegisterable.register(ROCKSLATE_LAPIS_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_LAPIS_ORES, 7)));
+        configuredFeatureRegisterable.register(ROCKSLATE_EMERALD_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_EMERALD_ORES, 3)));
+    }
 }

@@ -15,11 +15,8 @@ public class BelowBedrockCaves implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItems.registerItems();
-		ModBlocks.registerModBlocks();
 		ModDimensions.register();
 		ModWorldGen.generateModWorldGen();
-		ModBiomes.register();
 
 		LOGGER.info("[TBBC] Successfully initialized!");
 	}
