@@ -32,6 +32,7 @@
   "tooltip.tbbc.ironslate_block_2": "Used as the Below Bedrock Caves portal block.",
   "tooltip.tbbc.techreborn_1": "§7§oTechReborn",
   "tooltip.tbbc.powah_1": "§7§oPowah! (Rearchitected)",
+  "tooltip.tbbc.placeholder": "§7§o*PLACEHOLDER* (parent mod not found)",
 
   "tooltip_shift_1.tbbc.tbbc_gem": "This gem is used to ignite ",
   "tooltip_shift_2.tbbc.tbbc_gem": "the Below Bedrock Caves portal.",

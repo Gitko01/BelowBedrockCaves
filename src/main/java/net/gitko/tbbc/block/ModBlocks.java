@@ -200,7 +200,12 @@ public class ModBlocks {
     }
 
     private static void registerHiddenBlockItem(String name, Block block) {
-        BlockItem blockItem = new BlockItem(block, new FabricItemSettings());
+        BlockItem blockItem = new BlockItem(block, new FabricItemSettings()) {
+            @Override
+            public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+                tooltip.add(Text.translatable("tooltip.tbbc.placeholder"));
+            }
+        };
 
         Registry.register(Registries.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
                 blockItem);
