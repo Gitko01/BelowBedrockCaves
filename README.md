@@ -15,8 +15,8 @@ There are a couple places you can download this mod from.
 # Wiki
 [https://gitko01.github.io/wikis/tbbc/index.html](https://gitko01.github.io/wikis/tbbc/index.html)  
 
-# Changelog (v1.0.0 -> v1.0.1)
-- Updates to Custom Portal API and some other minor changes to the mod
+# Changelog (v1.0.1 -> v1.1.0)
+- Added Powah and TechReborn ores
 
 # Bugs  
 Please report all bugs to this GitHub repo's issues section.
@@ -26,7 +26,8 @@ Thanks to the developers of FabricMC!
 [Custom Portal API](https://github.com/kyrptonaught/customportalapi)
 
 # Future Features / Versions 
-Nothing as of now
+- Ad Astra ores
+- Modern Industrialization ores
 
 # Building Mod
 1. Download source code for this mod

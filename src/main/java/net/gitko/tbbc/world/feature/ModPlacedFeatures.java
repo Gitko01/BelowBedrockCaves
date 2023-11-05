@@ -35,7 +35,6 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ROCKSLATE_URANINITE_POOR_ORE_PLACED = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_uraninite_poor_ore_placed"));
     public static final RegistryKey<PlacedFeature> ROCKSLATE_URANINITE_ORE_PLACED = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_uraninite_ore_placed"));
     public static final RegistryKey<PlacedFeature> ROCKSLATE_URANINITE_DENSE_ORE_PLACED = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_uraninite_dense_ore_placed"));
-    public static final RegistryKey<PlacedFeature> BBC_DRY_ICE_PLACED = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "bbc_dry_ice_placed"));
 
     public static void bootstrap(Registerable<PlacedFeature> placedFeatureRegisterable) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = placedFeatureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
