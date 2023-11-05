@@ -2,6 +2,7 @@ package net.gitko.tbbc.world.gen;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
+import net.fabricmc.loader.api.FabricLoader;
 import net.gitko.tbbc.BelowBedrockCaves;
 import net.gitko.tbbc.world.feature.ModPlacedFeatures;
 import net.minecraft.world.gen.GenerationStep;
@@ -40,5 +41,42 @@ public class ModOreGeneration {
 
         BiomeModifications.addFeature(bbcDimBiomes(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_EMERALD_ORE_PLACED);
+
+        if (FabricLoader.getInstance().isModLoaded("techreborn")) {
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_BAUXITE_ORE_PLACED);
+
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_GALENA_ORE_PLACED);
+
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_IRIDIUM_ORE_PLACED);
+
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_LEAD_ORE_PLACED);
+
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_RUBY_ORE_PLACED);
+
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_SAPPHIRE_ORE_PLACED);
+
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_SILVER_ORE_PLACED);
+
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_TIN_ORE_PLACED);
+        }
+
+        if (FabricLoader.getInstance().isModLoaded("powah")) {
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_URANINITE_POOR_ORE_PLACED);
+
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_URANINITE_ORE_PLACED);
+
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_URANINITE_DENSE_ORE_PLACED);
+        }
     }
 }

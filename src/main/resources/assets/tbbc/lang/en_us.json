@@ -12,12 +12,26 @@
   "block.tbbc.rockslate_lapis_ore": "Rockslate Lapis Ore",
   "block.tbbc.rockslate_emerald_ore": "Rockslate Emerald Ore",
 
+  "block.tbbc.rockslate_bauxite_ore": "Rockslate Bauxite Ore",
+  "block.tbbc.rockslate_galena_ore": "Rockslate Galena Ore",
+  "block.tbbc.rockslate_iridium_ore": "Rockslate Iridium Ore",
+  "block.tbbc.rockslate_lead_ore": "Rockslate Lead Ore",
+  "block.tbbc.rockslate_ruby_ore": "Rockslate Ruby Ore",
+  "block.tbbc.rockslate_sapphire_ore": "Rockslate Sapphire Ore",
+  "block.tbbc.rockslate_silver_ore": "Rockslate Silver Ore",
+  "block.tbbc.rockslate_tin_ore": "Rockslate Tin Ore",
+  "block.tbbc.rockslate_uraninite_ore": "Rockslate Uraninite Ore",
+  "block.tbbc.rockslate_uraninite_poor_ore": "Rockslate Uraninite Ore (Poor)",
+  "block.tbbc.rockslate_uraninite_dense_ore": "Rockslate Uraninite Ore (Dense)",
+
   "item.tbbc.tbbc_gem": "TBBC Gem",
 
   "tooltip.tbbc.hold_shift": "Hold §3SHIFT§r for more information",
 
   "tooltip.tbbc.ironslate_block_1": "A reinforced version of deepslate.",
   "tooltip.tbbc.ironslate_block_2": "Used as the Below Bedrock Caves portal block.",
+  "tooltip.tbbc.techreborn_1": "§7§oTechReborn",
+  "tooltip.tbbc.powah_1": "§7§oPowah! (Rearchitected)",
 
   "tooltip_shift_1.tbbc.tbbc_gem": "This gem is used to ignite ",
   "tooltip_shift_2.tbbc.tbbc_gem": "the Below Bedrock Caves portal.",

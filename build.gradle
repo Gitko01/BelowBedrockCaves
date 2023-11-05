@@ -33,6 +33,15 @@ repositories {
 	maven {
 		url = "https://maven.kyrptonaught.dev"
 	}
+
+	maven {
+		name = 'energyApi'
+		url = 'https://maven.fabricmc.net/'
+	}
+
+	maven {
+		url "https://cursemaven.com"
+	}
 }
 
 
@@ -47,7 +56,10 @@ dependencies {
 	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 	modImplementation "net.kyrptonaught:customportalapi:${project.custom_portal_api}"
 
-	// Include in final jar
+	modImplementation "curse.maven:jei-238222:4712867"
+	modImplementation "curse.maven:morejeiinfo-902996:4736568"
+
+	// Include in final jar (dependencies)
 	include "net.kyrptonaught:customportalapi:${project.custom_portal_api}"
 }
 
