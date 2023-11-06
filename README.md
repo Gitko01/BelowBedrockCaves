@@ -13,10 +13,7 @@ There are a couple places you can download this mod from.
 4. [My website](https://gitko01.github.io)  
 
 # Wiki
-[https://gitko01.github.io/wikis/tbbc/index.html](https://gitko01.github.io/wikis/tbbc/index.html)  
-
-# Changelog (v1.0.1 -> v1.1.0)
-- Added Powah and TechReborn ores
+[https://gitko01.github.io/wikis/tbbc/index.html](https://gitko01.github.io/wikis/tbbc/index.html)
 
 # Bugs  
 Please report all bugs to this GitHub repo's issues section.
