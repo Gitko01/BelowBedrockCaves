@@ -2,6 +2,7 @@ package net.gitko.tbbc.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.loader.api.FabricLoader;
 import net.gitko.tbbc.BelowBedrockCaves;
 import net.gitko.tbbc.item.ModItemGroup;
 import net.minecraft.block.Block;
@@ -89,40 +90,111 @@ public class ModBlocks {
                     .requiresTool()
             ), ModItemGroup.TAB);
 
-    // Registry stuff
+    // TR ores
+    public static Block ROCKSLATE_BAUXITE_ORE;
+    public static Block ROCKSLATE_GALENA_ORE;
+    public static Block ROCKSLATE_IRIDIUM_ORE;
+    public static Block ROCKSLATE_LEAD_ORE;
+    public static Block ROCKSLATE_RUBY_ORE;
+    public static Block ROCKSLATE_SAPPHIRE_ORE;
+    public static Block ROCKSLATE_SILVER_ORE;
+    public static Block ROCKSLATE_TIN_ORE;
+
+    // Powah ores
+    public static Block ROCKSLATE_URANINITE_POOR_ORE;
+    public static Block ROCKSLATE_URANINITE_ORE;
+    public static Block ROCKSLATE_URANINITE_DENSE_ORE;
+
+    public static void registerDependentBlocks() {
+        // Tech Reborn
+        // only overworld ores (pyrite, cinnabar, sphalerite, tungsten, sheldonite, peridot, and sodalite EXCLUDED)
+        ROCKSLATE_BAUXITE_ORE = registerDependentOre("rockslate_bauxite_ore", "techreborn");
+        ROCKSLATE_GALENA_ORE = registerDependentOre("rockslate_galena_ore", "techreborn");
+        ROCKSLATE_IRIDIUM_ORE = registerDependentOre("rockslate_iridium_ore", "techreborn");
+        ROCKSLATE_LEAD_ORE = registerDependentOre("rockslate_lead_ore", "techreborn");
+        ROCKSLATE_RUBY_ORE = registerDependentOre("rockslate_ruby_ore", "techreborn");
+        ROCKSLATE_SAPPHIRE_ORE = registerDependentOre("rockslate_sapphire_ore", "techreborn");
+        ROCKSLATE_SILVER_ORE = registerDependentOre("rockslate_silver_ore", "techreborn");
+        ROCKSLATE_TIN_ORE = registerDependentOre("rockslate_tin_ore", "techreborn");
+
+        // Powah
+        ROCKSLATE_URANINITE_POOR_ORE = registerDependentOre("rockslate_uraninite_poor_ore", "powah");
+        ROCKSLATE_URANINITE_ORE = registerDependentOre("rockslate_uraninite_ore", "powah");
+        ROCKSLATE_URANINITE_DENSE_ORE = registerDependentOre("rockslate_uraninite_dense_ore", "powah");
+
+        // Ad Astra
+
+        // Modern Industrialization
+
+    }
+
+    private static Block registerDependentOre(String name, String modid) {
+        if (!FabricLoader.getInstance().isModLoaded(modid)) {
+            return registerHiddenBlock(name,
+                    new Block(FabricBlockSettings.of(
+                                    Material.STONE)
+                            .strength(7f, 3f)
+                            .requiresTool()
+                    ));
+        } else {
+            return registerBlock(name,
+                    new Block(FabricBlockSettings.of(
+                                    Material.STONE)
+                            .strength(7f, 3f)
+                            .requiresTool()
+                    ), ModItemGroup.TAB, "tooltip.tbbc." + modid, 1, false);
+        }
+    }
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey, Integer tooltipLineAmount, Boolean holdDownShift) {
         registerBlockItem(name, block, group, tooltipKey, tooltipLineAmount, holdDownShift);
         return Registry.register(Registry.BLOCK, new Identifier(BelowBedrockCaves.MOD_ID, name), block);
     }
 
-    private static Item registerBlockItem(String name, Block block, ItemGroup group, String tooltipKey, Integer tooltipLineAmount, Boolean holdDownShift) {
-        return Registry.register(Registry.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
-            new BlockItem(block, new FabricItemSettings().group(group)) {
-                @Override
-                public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-                    // Mojang. Why is it so hard to add \n?
-                    if (holdDownShift) {
-                        if (Screen.hasShiftDown()) {
+    private static Block registerHiddenBlock(String name, Block block) {
+        registerHiddenBlockItem(name, block);
+        return Registry.register(Registry.BLOCK, new Identifier(BelowBedrockCaves.MOD_ID, name), block);
+    }
+
+    private static void registerHiddenBlockItem(String name, Block block) {
+        BlockItem blockItem = new BlockItem(block, new FabricItemSettings()) {
+            @Override
+            public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+                tooltip.add(Text.translatable("tooltip.tbbc.placeholder"));
+            }
+        };
+
+        Registry.register(Registry.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
+                blockItem);
+    }
+
+    private static void registerBlockItem(String name, Block block, ItemGroup group, String tooltipKey, Integer tooltipLineAmount, Boolean holdDownShift) {
+        Registry.register(Registry.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings().group(group)) {
+                    @Override
+                    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+                        // Mojang. Why is it so hard to add \n?
+                        if (holdDownShift) {
+                            if (Screen.hasShiftDown()) {
+                                Integer currentLine = 1;
+
+                                while (tooltipLineAmount >= currentLine) {
+                                    tooltip.add(Text.translatable(tooltipKey + "_" + currentLine.toString()));
+                                    currentLine += 1;
+                                }
+                            } else {
+                                tooltip.add(Text.translatable("tooltip.tbbc.hold_shift"));
+                            }
+                        } else {
                             Integer currentLine = 1;
 
                             while (tooltipLineAmount >= currentLine) {
                                 tooltip.add(Text.translatable(tooltipKey + "_" + currentLine.toString()));
                                 currentLine += 1;
                             }
-                        } else {
-                            tooltip.add(Text.translatable("tooltip.tbbc.hold_shift"));
-                        }
-                    } else {
-                        Integer currentLine = 1;
-
-                        while (tooltipLineAmount >= currentLine) {
-                            tooltip.add(Text.translatable(tooltipKey + "_" + currentLine.toString()));
-                            currentLine += 1;
                         }
                     }
-                }
-            });
+                });
     }
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
@@ -130,8 +202,8 @@ public class ModBlocks {
         return Registry.register(Registry.BLOCK, new Identifier(BelowBedrockCaves.MOD_ID, name), block);
     }
 
-    private static Item registerBlockItem(String name, Block block, ItemGroup group) {
-        return Registry.register(Registry.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
+    private static void registerBlockItem(String name, Block block, ItemGroup group) {
+        Registry.register(Registry.ITEM, new Identifier(BelowBedrockCaves.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings().group(group)));
     }
 

@@ -17,6 +17,7 @@ public class BelowBedrockCaves implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerItems();
 		ModBlocks.registerModBlocks();
+		ModBlocks.registerDependentBlocks();
 		ModDimensions.register();
 		ModWorldGen.generateModWorldGen();
 		ModBiomes.register();

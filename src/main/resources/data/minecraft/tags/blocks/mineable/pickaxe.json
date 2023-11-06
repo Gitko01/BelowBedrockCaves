@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "tbbc:rockslate_block",
     "tbbc:ironslate_block",
@@ -9,6 +10,17 @@
     "tbbc:rockslate_diamond_ore",
     "tbbc:rockslate_redstone_ore",
     "tbbc:rockslate_emerald_ore",
-    "tbbc:rockslate_lapis_ore"
+    "tbbc:rockslate_lapis_ore",
+    "tbbc:rockslate_iridium_ore",
+    "tbbc:rockslate_bauxite_ore",
+    "tbbc:rockslate_galena_ore",
+    "tbbc:rockslate_lead_ore",
+    "tbbc:rockslate_ruby_ore",
+    "tbbc:rockslate_sapphire_ore",
+    "tbbc:rockslate_silver_ore",
+    "tbbc:rockslate_tin_ore",
+    "tbbc:rockslate_uraninite_poor_ore",
+    "tbbc:rockslate_uraninite_ore",
+    "tbbc:rockslate_uraninite_dense_ore"
   ]
 }
