@@ -25,6 +25,7 @@ Thanks to the developers of FabricMC!
 # Future Features / Versions
 - Ad Astra ores
 - Modern Industrialization ores
+- XP drops for certain ores
 
 # Building Mod
 1. Download source code for this mod
