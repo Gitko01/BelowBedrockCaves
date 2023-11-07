@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tbbc:block/powah/rockslate_uraninite_ore_poor"
+  }
+}

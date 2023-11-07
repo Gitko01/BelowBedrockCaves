@@ -21,11 +21,6 @@ public class ModWorldGenerator extends FabricDynamicRegistryProvider {
     }
 
     @Override
-    public CompletableFuture<?> run(DataWriter writer) {
-        return null;
-    }
-
-    @Override
     public String getName() {
         return BelowBedrockCaves.MOD_ID;
     }
