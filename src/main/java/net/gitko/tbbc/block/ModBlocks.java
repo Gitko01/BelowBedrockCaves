@@ -108,6 +108,9 @@ public class ModBlocks {
     public static Block ROCKSLATE_URANINITE_ORE;
     public static Block ROCKSLATE_URANINITE_DENSE_ORE;
 
+    // Create ores
+    public static Block ROCKSLATE_ZINC_ORE;
+
     public static void registerDependentBlocks() {
         // Tech Reborn
         // only overworld ores (pyrite, cinnabar, sphalerite, tungsten, sheldonite, peridot, and sodalite EXCLUDED)
@@ -124,6 +127,9 @@ public class ModBlocks {
         ROCKSLATE_URANINITE_POOR_ORE = registerDependentOre("rockslate_uraninite_poor_ore", "powah");
         ROCKSLATE_URANINITE_ORE = registerDependentOre("rockslate_uraninite_ore", "powah");
         ROCKSLATE_URANINITE_DENSE_ORE = registerDependentOre("rockslate_uraninite_dense_ore", "powah");
+
+        // Create
+        ROCKSLATE_ZINC_ORE = registerDependentOre("rockslate_zinc_ore", "create");
 
         // Ad Astra
 
