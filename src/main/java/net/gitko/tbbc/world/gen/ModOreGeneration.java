@@ -81,5 +81,10 @@ public class ModOreGeneration {
             BiomeModifications.addFeature(bbcDimBiomes(),
                     GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_URANINITE_DENSE_ORE_PLACED.getKey().get());
         }
+
+        if (FabricLoader.getInstance().isModLoaded("create")) {
+            BiomeModifications.addFeature(bbcDimBiomes(),
+                    GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ROCKSLATE_ZINC_ORE_PLACED.getKey().get());
+        }
     }
 }

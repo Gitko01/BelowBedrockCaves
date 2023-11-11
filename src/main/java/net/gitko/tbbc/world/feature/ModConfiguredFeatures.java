@@ -115,6 +115,12 @@ public class ModConfiguredFeatures {
                     ModBlocks.ROCKSLATE_URANINITE_DENSE_ORE.getDefaultState())
     );
 
+    // Create ores
+    public static final List<OreFeatureConfig.Target> BBC_ZINC_ORES = List.of(
+            OreFeatureConfig.createTarget(ModConfiguredFeatures.ROCKSLATE,
+                    ModBlocks.ROCKSLATE_ZINC_ORE.getDefaultState())
+    );
+
     // Registry Entries
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_COAL_ORE =
@@ -195,4 +201,8 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("rockslate_uraninite_dense_ore", Feature.ORE,
                     new OreFeatureConfig(BBC_URANINITE_DENSE_ORES, 3));
 
+    // Create ores
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ROCKSLATE_ZINC_ORE =
+            ConfiguredFeatures.register("rockslate_zinc_ore", Feature.ORE,
+                    new OreFeatureConfig(BBC_ZINC_ORES, 12));
 }

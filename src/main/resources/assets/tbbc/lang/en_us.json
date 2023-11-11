@@ -23,6 +23,7 @@
   "block.tbbc.rockslate_uraninite_ore": "Rockslate Uraninite Ore",
   "block.tbbc.rockslate_uraninite_poor_ore": "Rockslate Uraninite Ore (Poor)",
   "block.tbbc.rockslate_uraninite_dense_ore": "Rockslate Uraninite Ore (Dense)",
+  "block.tbbc.rockslate_zinc_ore": "Rockslate Zinc Ore",
 
   "item.tbbc.tbbc_gem": "TBBC Gem",
 
@@ -32,6 +33,7 @@
   "tooltip.tbbc.ironslate_block_2": "Used as the Below Bedrock Caves portal block.",
   "tooltip.tbbc.techreborn_1": "§7§oTechReborn",
   "tooltip.tbbc.powah_1": "§7§oPowah! (Rearchitected)",
+  "tooltip.tbbc.create_1": "§7§oCreate",
   "tooltip.tbbc.placeholder": "§7§o*PLACEHOLDER* (parent mod not found)",
 
   "tooltip_shift_1.tbbc.tbbc_gem": "This gem is used to ignite ",

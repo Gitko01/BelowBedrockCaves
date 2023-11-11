@@ -77,4 +77,9 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> ROCKSLATE_URANINITE_DENSE_ORE_PLACED = PlacedFeatures.register("rockslate_uraninite_dense_ore_placed",
             ModConfiguredFeatures.ROCKSLATE_URANINITE_DENSE_ORE, ModOreFeatures.modifiersWithCount(8,
                     HeightRangePlacementModifier.uniform(YOffset.BOTTOM, YOffset.fixed(0))));
+
+    // Create ores
+    public static final RegistryEntry<PlacedFeature> ROCKSLATE_ZINC_ORE_PLACED = PlacedFeatures.register("rockslate_zinc_ore_placed",
+            ModConfiguredFeatures.ROCKSLATE_ZINC_ORE, ModOreFeatures.modifiersWithCount(20,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(1), YOffset.fixed(70))));
 }
