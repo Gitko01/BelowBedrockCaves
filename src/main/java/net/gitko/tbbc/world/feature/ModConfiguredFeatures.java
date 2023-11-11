@@ -114,6 +114,12 @@ public class ModConfiguredFeatures {
                     ModBlocks.ROCKSLATE_URANINITE_DENSE_ORE.getDefaultState())
     );
 
+    // Create ores
+    public static final List<OreFeatureConfig.Target> BBC_ZINC_ORES = List.of(
+            OreFeatureConfig.createTarget(ModConfiguredFeatures.ROCKSLATE,
+                    ModBlocks.ROCKSLATE_ZINC_ORE.getDefaultState())
+    );
+
     // Registry Entries
     public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_COAL_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_coal_ore"));
     public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_COPPER_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_copper_ore"));
@@ -139,6 +145,9 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_URANINITE_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_uraninite_ore"));
     public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_URANINITE_DENSE_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_uraninite_dense_ore"));
 
+    // Create ores
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROCKSLATE_ZINC_ORE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_zinc_ore"));
+
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> configuredFeatureRegisterable) {
         configuredFeatureRegisterable.register(ROCKSLATE_COAL_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_COAL_ORES, 17)));
         configuredFeatureRegisterable.register(ROCKSLATE_COPPER_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_COPPER_ORES, 20)));
@@ -163,5 +172,8 @@ public class ModConfiguredFeatures {
         configuredFeatureRegisterable.register(ROCKSLATE_URANINITE_POOR_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_URANINITE_POOR_ORES, 5)));
         configuredFeatureRegisterable.register(ROCKSLATE_URANINITE_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_URANINITE_ORES, 4)));
         configuredFeatureRegisterable.register(ROCKSLATE_URANINITE_DENSE_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_URANINITE_DENSE_ORES, 3)));
+
+        // Create ores
+        configuredFeatureRegisterable.register(ROCKSLATE_ZINC_ORE, new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(BBC_ZINC_ORES, 12)));
     }
 }

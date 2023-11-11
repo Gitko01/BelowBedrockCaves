@@ -36,6 +36,9 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ROCKSLATE_URANINITE_ORE_PLACED = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_uraninite_ore_placed"));
     public static final RegistryKey<PlacedFeature> ROCKSLATE_URANINITE_DENSE_ORE_PLACED = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_uraninite_dense_ore_placed"));
 
+    // Create ores
+    public static final RegistryKey<PlacedFeature> ROCKSLATE_ZINC_ORE_PLACED = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(BelowBedrockCaves.MOD_ID, "rockslate_zinc_ore_placed"));
+
     public static void bootstrap(Registerable<PlacedFeature> placedFeatureRegisterable) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = placedFeatureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -125,6 +128,9 @@ public class ModPlacedFeatures {
         registerUniformOre(placedFeatureRegisterable, registryEntryLookup, ROCKSLATE_URANINITE_POOR_ORE_PLACED, ModConfiguredFeatures.ROCKSLATE_URANINITE_POOR_ORE, 20, YOffset.BOTTOM, 64);
         registerUniformOre(placedFeatureRegisterable, registryEntryLookup, ROCKSLATE_URANINITE_ORE_PLACED, ModConfiguredFeatures.ROCKSLATE_URANINITE_ORE, 15, YOffset.BOTTOM, 20);
         registerUniformOre(placedFeatureRegisterable, registryEntryLookup, ROCKSLATE_URANINITE_DENSE_ORE_PLACED, ModConfiguredFeatures.ROCKSLATE_URANINITE_DENSE_ORE, 8, YOffset.BOTTOM, 0);
+
+        // Create ores (same veins per chunk increase as TR and Powah)
+        registerUniformOre(placedFeatureRegisterable, registryEntryLookup, ROCKSLATE_ZINC_ORE_PLACED, ModConfiguredFeatures.ROCKSLATE_ZINC_ORE, 20, YOffset.aboveBottom(1), 70);
     }
 
     public static void registerUniformOre(Registerable<PlacedFeature> placedFeatureRegisterable, RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup, RegistryKey<PlacedFeature> placedFeature, RegistryKey<ConfiguredFeature<?, ?>> configuredFeature, int veinsPerChunk, YOffset minOffset, int maxY) {
